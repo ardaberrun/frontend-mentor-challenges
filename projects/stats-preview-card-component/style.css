@@ -1,0 +1,143 @@
+/* 
+font-family: 'Inter', sans-serif;
+font-family: 'Lexend Deca', sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+
+:root {
+    --text-1 : hsl(0, 0%, 100%);
+    --text-2 : hsla(0, 0%, 100%, 0.75);
+    --text-3 : hsla(0, 0%, 100%, 0.6);
+
+    --main-background: hsl(233, 47%, 7%);
+    --card-background: hsl(244, 38%, 16%);
+    --soft-violet: hsl(277, 64%, 61%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box ;
+}
+
+body {
+  background-color: var(--main-background);
+  font-family: "Inter", sans-serif;
+  color: white;
+  font-size: 15px;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.card {
+  width: 90vw;
+  height: auto;
+  background-color: var(--card-background);
+  border-radius: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+ 
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  background-color: var(--soft-violet);
+  border-top-left-radius: 0.7rem;
+  border-top-right-radius: 0.7rem;
+}
+
+.card-image img {
+  width: 100%;
+  height: auto;
+  opacity: 0.5;
+  vertical-align: top;
+  border-top-left-radius: 0.7rem;
+  border-top-right-radius: 0.7rem;
+}
+
+.card-content{
+  padding: 2.5rem;
+}
+
+.card-header h1 {
+  font-size: 2.17rem;
+}
+.card-header span {
+  color: var(--soft-violet);
+}
+
+.card-body {
+  margin-top: 1rem;
+}
+.card-body p {
+  color: var(--text-3);
+  line-height: 1.7;
+  font-size: 1.1rem;
+}
+
+.card-footer {
+  margin-top: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.stats {
+  margin-top: 1.6rem;
+}
+.card-footer h3 {
+  color: var(--text-1);
+}
+.card-footer p {
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-top: 5px;
+  letter-spacing: 1.5px;
+}
+
+@media screen and (min-width: 576px) {
+  .card-footer {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 990px) {
+  .card {
+    flex-direction: row;
+    text-align: left;
+    max-width: 992px;
+    max-height: 480px;
+    
+  }
+  .card-image {
+    order: 2;
+    flex: 1;
+    border-radius: 0;
+    border-top-right-radius: 0.7rem;
+    border-bottom-right-radius: 0.7rem;
+  }
+  .card-image img {
+    border-radius: 0;
+    border-top-right-radius: 0.7rem;
+    border-bottom-right-radius: 0.7rem;
+    height: 400px;
+  }
+  .card-content {
+    flex: 1;
+    padding: 3rem;
+  }
+
+  .card-footer {
+    justify-content: space-between;
+    padding-right: 2rem;
+  }
+  .card-footer p {
+    font-family: 'Lexend Deca', sans-serif;
+  }
+}
