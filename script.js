@@ -1,11 +1,19 @@
 const challenges = [
   {
-    projectId: 1,
+    challengeId: 1,
     name: "Stats preview card component",
-    link: "./projects/stats-preview-card-component/index.html",
+    link: "./projects/1-stats-preview-card-component/index.html",
     challengeLink: "https://www.frontendmentor.io/challenges/stats-preview-card-component-8JqbgoU62",
-    image: "./projects/stats-preview-card-component/design/desktop-preview.jpg",
+    image: "./projects/1-stats-preview-card-component/design/desktop-preview.jpg",
     techs: ["html","css"]
+  },
+  {
+    challengeId: 2,
+    name: "Column preview card component",
+    link: "./projects/2-3column-preview-card-component/index.html",
+    challengeLink: "https://www.frontendmentor.io/challenges/3column-preview-card-component-pH92eAR2-",
+    image: "./projects/2-3column-preview-card-component/design/desktop-preview.jpg",
+    techs: ["css","html"]
   },
 
 ];
