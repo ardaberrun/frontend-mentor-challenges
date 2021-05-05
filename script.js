@@ -15,6 +15,14 @@ const challenges = [
     image: "./projects/2-3column-preview-card-component/design/desktop-preview.jpg",
     techs: ["css","html"]
   },
+  {
+    challengeId: 3,
+    name: "FAQ accordion card",
+    link: "./projects/3-faq-accordion-card/index.html",
+    challengeLink: "https://www.frontendmentor.io/challenges/faq-accordion-card-XlyjD0Oam",
+    image: "./projects/3-faq-accordion-card/design/desktop-preview.jpg",
+    techs: ["html","css"]
+  },
 
 ];
 
