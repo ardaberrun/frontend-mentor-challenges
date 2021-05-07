@@ -23,6 +23,14 @@ const challenges = [
     image: "./projects/3-faq-accordion-card/design/desktop-preview.jpg",
     techs: ["html","css"]
   },
+  {
+    challengeId: 4,
+    name: "Social proof section",
+    link: "./projects/4-social-proof-section/index.html",
+    challengeLink: "https://www.frontendmentor.io/challenges/social-proof-section-6e0qTv_bA",
+    image: "./projects/4-social-proof-section/design/desktop-preview.jpg",
+    techs: ["html","css"]
+  },
 
 ];
 
