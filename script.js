@@ -31,6 +31,14 @@ const challenges = [
     image: "./projects/4-social-proof-section/design/desktop-preview.jpg",
     techs: ["html","css"]
   },
+  {
+    challengeId: 5,
+    name: "Four card feature section",
+    link: "./projects/5-four-card-feature-section/index.html",
+    challengeLink: "https://www.frontendmentor.io/challenges/four-card-feature-section-weK1eFYK/",
+    image: "./projects/5-four-card-feature-section/design/desktop-preview.jpg",
+    techs: ["html","css"]
+  },
 
 ];
 
