@@ -39,6 +39,14 @@ const challenges = [
     image: "./projects/5-four-card-feature-section/design/desktop-preview.jpg",
     techs: ["html","css"]
   },
+  {
+    challengeId: 6,
+    name: "Huddle landing page with a single introductory section",
+    link: "./projects/6-huddle-landing-page/index.html",
+    challengeLink: "https://www.frontendmentor.io/challenges/huddle-landing-page-with-a-single-introductory-section-B_2Wvxgi0",
+    image: "./projects/6-huddle-landing-page/design/desktop-preview.jpg",
+    techs: ["css","html"]
+  },
 
 ];
 
