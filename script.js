@@ -47,6 +47,14 @@ const challenges = [
     image: "./projects/6-huddle-landing-page/design/desktop-preview.jpg",
     techs: ["css","html"]
   },
+  {
+    challengeId: 7,
+    name: "Base Apparel coming soon page",
+    link: "./projects/7-base-apparel-coming-soon/index.html",
+    challengeLink: "https://www.frontendmentor.io/challenges/base-apparel-coming-soon-page-5d46b47f8db8a7063f9331a0",
+    image: "./projects/7-base-apparel-coming-soon/design/desktop-preview.jpg",
+    techs: ["css","html"]
+  },
 
 ];
 

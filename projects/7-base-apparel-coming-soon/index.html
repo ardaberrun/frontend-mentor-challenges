@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <title>Frontend Mentor | Base Apparel coming soon page</title>
+  </head>
+  <body>
+    <header class="logo">
+      <img src="./images/logo.svg" alt="Base Apparel Logo" />
+    </header>
+    <div class="hero">
+      <div class="hero__image">
+        <img src="images/hero-mobile.jpg" alt="Woman" class="woman-mobile"/>
+        <img src="images/hero-desktop.jpg" alt="Woman" class="woman-desktop"/>
+      </div>
+      <div class="hero__content">
+        <div class="hero__content--wrapper">
+          <h1 class="hero__content--title"><span>We're</span> coming soon</h1>
+          <p class="hero__content--body">
+            Hello fellow shoppers! We're currently building our new fashion store.
+            Add your email below to stay up-to-date with announcements and our
+            launch deals.
+          </p>
+          <form class="hero__content--form" action="">
+           <span> 
+             <input type="email" placeholder="Email Address" id="myInput" name="myInput"/>
+             <img id="errorImg" src="images/icon-error.svg">
+           </span>
+           <p id="error">Please provide a email</p>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+        const errorMessage = document.getElementById('error');   
+        const errorImg = document.getElementById('errorImg');
+        const email = document.getElementById('myInput');
+
+        email.addEventListener("keydown",(e) => {         
+          const mailPattern = /^[a-z]{1,6}_?\d{0,4}@[a-z0-9.-]+\.[a-z]{2,}$/
+           
+          if(mailPattern.test(e.target.value) || e.target.value == '') {
+            errorImg.style.display = 'none'
+            errorMessage.style.display = 'none';
+            email.style.border = '1px solid #CE9797';      
+           
+          } else {
+            errorImg.style.display = 'block'
+            errorMessage.style.display = 'block'
+            email.style.border = '1px solid #F96262';
+          }         
+        })
+      
+    </script>
+
+
+  </body>
+</html>

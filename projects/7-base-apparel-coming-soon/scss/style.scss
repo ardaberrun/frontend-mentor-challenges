@@ -1,0 +1,229 @@
+// ### Gradients
+
+// - Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%)
+// - Linear,
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$colors: (
+    desatured-red: hsl(0, 36%, 70%),
+    soft-red:hsl(0, 93%, 68%),
+    dark-grayish-red: hsl(0, 6%, 24%),
+);
+
+@function getColor($colorName) {
+    @return map-get($colors,$colorName);
+}
+
+$padding:2rem;
+$margin-2: 2rem;
+$tablet-width: 780px;
+$desktop-width: 1024px;
+$small-devices-width: 374px;
+
+/*RESPONSIVE*/
+@mixin tablet {
+    @media (min-width: #{$tablet-width}){
+      @content;
+    }
+}
+@mixin desktop {
+    @media (min-width: #{$desktop-width}) {
+      @content;
+    }
+}
+@mixin small-devices {
+    @media (max-width: #{$small-devices-width}) {
+      @content;
+    }
+}
+
+
+body {
+    max-width: 100%;
+    min-height: 100vh;
+    font-family: 'Josefin Sans', sans-serif;
+    background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+
+    @include tablet {
+        background: url(../images/bg-pattern-desktop.svg) left top;
+    }
+}
+
+
+.logo {
+    padding: $padding;
+
+    @include tablet {
+        position: absolute;
+        left: $padding 
+    }
+    @include desktop {
+        position: absolute;
+        left: $padding * 2
+    }
+
+}
+
+.hero {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    @include tablet {
+        flex-direction: row-reverse;
+    }
+
+    &__image {
+        width: 100%;
+        
+
+        .woman-desktop {
+            display: none;
+        }
+
+        .woman-mobile {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        @include tablet {
+            & {
+                width:40vw;
+            }
+            .woman-desktop {
+                display: block;
+                width: 100%;
+                height: 100vh;
+               
+            }
+            .woman-mobile {
+                display: none;
+            }
+        }
+        @include desktop {
+            & {
+                width: 45vw;
+            }
+        }
+    }
+
+    &__content { 
+        width: 100%;    
+        padding-right: $padding;
+        margin: 3rem 0;
+        text-align: center;
+
+        @include tablet {
+            & {
+                width:60vw;
+            } 
+            text-align: left;
+        }
+        @include desktop {
+            & {
+                width: 55vw;
+                padding: 0 $padding;
+            }
+        }
+
+        &--wrapper {
+            padding: 0 $padding;
+           @include tablet {
+               & {
+                   width: 50ch;
+                   padding: 0 $padding * 2;
+               }
+           }
+        }
+
+        &--title {
+            text-transform: uppercase;
+            font-size: 3rem;
+            letter-spacing: 10px;
+            color: getColor(dark-grayish-red);
+
+            span{
+                font-weight: 300;
+                color: getColor(desatured-red);
+            }
+
+            @include small-devices {
+                & {
+
+                    font-size: 2rem;
+                }
+            }
+        }
+
+        &--body {
+            margin-top: 2rem;
+            line-height: 1.6;
+            color: getColor(desatured-red);
+        }
+
+        &--form {
+            margin-top: 2rem;
+            input {
+                outline: none;
+                background: transparent;
+                border: 1px solid getColor(desatured-red);
+                padding: 12px 12px;
+                border-radius: 20px;
+                width: 250px;
+
+                &::placeholder {
+                    color: getColor(desatured-red);
+                }
+
+                @include tablet {
+                   width: 100%;
+                }
+            }
+            span {
+                position: relative;
+            }
+
+            span::after {
+                content: url(../images/icon-arrow.svg);
+                position: absolute;
+                right: 0;
+                top: -13px;
+                padding: 9px 25px;
+                border-radius: 25px;
+                box-shadow: 10px 10px 20px  rgba(0,0,0,0.2);
+                background: linear-gradient( 135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+                cursor: pointer;
+            }
+            img {   
+                display: none;  
+                position: absolute;
+                right: 75px;
+                top: -5px;
+            }
+
+            p {
+                display: none;
+                text-align:center;
+                font-size: 0.9rem;
+                color: getColor(soft-red);
+                margin: 1rem 4.5rem 0 0 ;
+                 
+                @include tablet {
+                    & {
+                        text-align: left;
+                        margin: 1rem 0 0 0.8rem;
+                    }
+                }
+            }
+        }
+    }
+}
