@@ -53,7 +53,15 @@ const challenges = [
     link: "./projects/7-base-apparel-coming-soon/index.html",
     challengeLink: "https://www.frontendmentor.io/challenges/base-apparel-coming-soon-page-5d46b47f8db8a7063f9331a0",
     image: "./projects/7-base-apparel-coming-soon/design/desktop-preview.jpg",
-    techs: ["css","html"]
+    techs: ["css","html","js"]
+  },
+  {
+    challengeId: 8,
+    name: "Intro component with signup form",
+    link: "./projects/8-intro-component-with-signup-form/index.html",
+    challengeLink: "https://www.frontendmentor.io/challenges/intro-component-with-signup-form-5cf91bd49edda32581d28fd1",
+    image: "./projects/8-intro-component-with-signup-form/design/desktop-preview.jpg",
+    techs: ["css","html","js"]
   },
 
 ];
